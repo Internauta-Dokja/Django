@@ -5,7 +5,7 @@ from django.shortcuts import render, HttpResponse, redirect
 
 
 layout = """
-    <h1> Proyecto Web (LP3) | Flor Cerdán </h1>
+    <h1> Proyecto Web (LP3) | Yesenia Zuñiga </h1>
     <hr/>
     <ul>
         <li>
@@ -26,19 +26,11 @@ layout = """
 
 
 def index(request):
-    mensaje="""
-        <h1>Inicio</h1>
-    """
-    return HttpResponse(layout + mensaje)
+    return render(request, 'index.html')
 
 
 def saludo(request):
-    mensaje = """
-        <h1>Bienvenidos</h1>
-        <h2>Flor Cerdán</h2>
-        <h3>Python....</h3>
-    """
-    return HttpResponse(layout + mensaje)
+    return render(request,'saludo.html')
 
 
 def rango(request):
